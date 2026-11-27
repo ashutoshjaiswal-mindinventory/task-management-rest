@@ -10,9 +10,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // Health check
 app.get("/health", (req, res) => {
-  res.status(200).json({
+  return res.status(200).json({
     success: true,
-    message: "API is running",
+    message: "Application is healthy",
+    timestamp: new Date().toISOString(),
   });
 });
 
