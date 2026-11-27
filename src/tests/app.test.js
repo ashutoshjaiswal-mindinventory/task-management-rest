@@ -10,7 +10,8 @@ describe("Application endpoints", () => {
       expect(response.statusCode).toBe(200);
       expect(response.body).toEqual({
         success: true,
-        message: "API is running",
+        message: "Application is healthy",
+        timestamp: expect.any(String),
       });
     });
   });
